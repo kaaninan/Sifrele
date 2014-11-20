@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sifrele</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="rounded">Rounded</string>
+    <string name="squared">Squared</string>
+
+    <string-array name="pages">
+        <item>com.example.kaaninan.TekHesap</item>
+    </string-array>
+
+    <!-- Düzenleme Başlangıcı -->
+
+    <!-- View Pager -->
+    <string name="viewPager_mesaj">Mesajlar</string>
+    <string name="viewPager_arkadas">Arkadaşlar</string>
+
+</resources>
