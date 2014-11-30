@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <!-- BU DTEST -->
+    <!-- Nasılsın -->
 
     <ListView
         android:id="@+id/listViewMesaj"
