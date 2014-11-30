@@ -1,4 +1,4 @@
-package com.example.kaaninan.sifrele;
+package com.example.kaaninan.sifrele.mesajlar;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,13 +8,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.kaaninan.sifrele.R;
+
 import java.util.ArrayList;
 
-public class AnaHesap extends Fragment {
+public class Mesajlar extends Fragment {
 
     private ListView listMesajlar;
 
-    public AnaHesap() {}
+    public Mesajlar() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,4 +37,4 @@ public class AnaHesap extends Fragment {
 
         return rootView;
     }
-}// END Tek Hesap
+}// END Tek AnaEkran

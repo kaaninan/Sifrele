@@ -1,4 +1,4 @@
-package com.example.kaaninan.sifrele;
+package com.example.kaaninan.sifrele.navigation;
 
 import android.content.res.Resources;
 import android.graphics.Canvas;

@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.kaaninan.sifrele.navigation.NavigationDrawer;
+
 import static android.view.Gravity.START;
 
 
@@ -31,7 +33,7 @@ public class MainActivity extends FragmentActivity {
 
         String[] Pages = getResources().getStringArray(R.array.pages);
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.container, android.support.v4.app.Fragment.instantiate(MainActivity.this, "com.example.kaaninan.sifrele.Hesap"));
+        tx.replace(R.id.container, android.support.v4.app.Fragment.instantiate(MainActivity.this, "com.example.kaaninan.sifrele.AnaEkran"));
         tx.commit();
 
         ActionBar actionBar = getActionBar();

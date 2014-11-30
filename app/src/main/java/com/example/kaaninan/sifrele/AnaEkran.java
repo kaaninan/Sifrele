@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.kaaninan.sifrele.animation.ZoomOutPageTransformer;
+import com.example.kaaninan.sifrele.arkadaslar.Arkadaslar;
+import com.example.kaaninan.sifrele.mesajlar.Mesajlar;
 
-public class Hesap extends Fragment{
+public class AnaEkran extends Fragment{
 
     private int sayi;
 
@@ -21,7 +23,7 @@ public class Hesap extends Fragment{
 
 
     public static Fragment newInstance(Context context) {
-        Hesap f = new Hesap();
+        AnaEkran f = new AnaEkran();
         return f;
     }
 
@@ -44,9 +46,9 @@ public class Hesap extends Fragment{
             public Fragment getItem(int position) {
                 switch(position){
                     case 0:
-                        return fragment = new AnaHesap();
+                        return fragment = new Mesajlar();
                     case 1:
-                        Fragment fragment = new TekHesap();
+                        Fragment fragment = new Arkadaslar();
                         return fragment;
                 }
                 return null;
