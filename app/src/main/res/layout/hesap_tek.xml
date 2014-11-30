@@ -5,9 +5,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
-
     android:baselineAligned="false"
     android:id="@+id/arkadaşscreen"
     android:measureWithLargestChild="false"
@@ -20,5 +17,5 @@
         android:layout_height="300dp"
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/arkadaşlar_ico"/>
+        android:background="@drawable/arkadaslar_ico"/>
 </LinearLayout>

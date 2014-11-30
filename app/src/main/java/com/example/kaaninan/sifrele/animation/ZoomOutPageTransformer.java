@@ -1,4 +1,4 @@
-package com.example.kaaninan.sifrele;
+package com.example.kaaninan.sifrele.animation;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;

@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.kaaninan.sifrele.animation.ZoomOutPageTransformer;
+
 public class Hesap extends Fragment{
 
     private int sayi;

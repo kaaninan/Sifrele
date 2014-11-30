@@ -6,6 +6,7 @@
     <!-- BU DTEST -->
     <!-- Nasılsın -->
     <!--iyiyim-->
+    <!-- bende iyiyim -->
 
     <ListView
         android:id="@+id/listViewMesaj"
