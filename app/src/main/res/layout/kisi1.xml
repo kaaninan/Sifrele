@@ -9,7 +9,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/imageView2"
-        android:background="@drawable/kullanıcı"
+        android:background="@drawable/kullanici"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         />
@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="kisi ismi"
-        android:gravity="center_vertical"
+
         android:id="@+id/textView"
-        android:layout_gravity="center_vertical"
+
         android:layout_marginLeft="80dp"/>
 </LinearLayout>
