@@ -5,17 +5,30 @@ public class DatabaseContract {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME= "db";
 
-    public static class Kayit {
+    public static class Hesap {
 
-        private Kayit() {}
+        private Hesap() {}
 
-        public static final String TABLE_NAME = "kayit";
+        public static final String TABLE_NAME = "hesap";
         public static final String ID = "id";
-        public static final String COLUMN_TEXT= "text";
-        public static final String COLUMN_TARIH = "tarih";
-        public static final String COLUMN_CHANGE = "change";
-        public static final String COLUMN_SON_DUZEN = "son_duzen";
+        public static final String COLUMN_ISIM= "isim";
+        public static final String COLUMN_EPOSTA = "eposta";
+        public static final String COLUMN_SIFRE = "sifre";
         public static final String COLUMN_RESIM = "resim";
-        public static final String COLUMN_RESIM2 = "resim2";
+        public static final String COLUMN_NUMARA = "numara";
     }
+
+    public static class Mesajlar {
+
+        private Mesajlar() {}
+
+        public static final String TABLE_NAME = "mesajlar";
+        public static final String ID = "id";
+        public static final String COLUMN_MESAJ= "mesaj";
+        public static final String COLUMN_VERICI = "verici";
+        public static final String COLUMN_ALICI = "alici";
+        public static final String COLUMN_TARIH = "tarih";
+
+    }
+
 }

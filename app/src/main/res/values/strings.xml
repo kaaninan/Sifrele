@@ -18,4 +18,11 @@
     <string name="viewPager_mesaj">Mesajlar</string>
     <string name="viewPager_arkadas">Arkadaşlar</string>
 
+    <string name="no_notes">Sorry, no contacts</string>
+    <string name="menu_insert">Insert new contact</string>
+    <string name="menu_delete">Delete contact</string>
+
+    <string name="label_name">Name</string>
+    <string name="label_address">Address</string>
+
 </resources>

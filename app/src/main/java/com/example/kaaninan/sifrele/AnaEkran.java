@@ -16,11 +16,7 @@ import com.example.kaaninan.sifrele.mesajlar.Mesajlar;
 
 public class AnaEkran extends Fragment{
 
-    private int sayi;
-
-    @SuppressWarnings("unused")
     private Fragment fragment;
-
 
     public static Fragment newInstance(Context context) {
         AnaEkran f = new AnaEkran();
