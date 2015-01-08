@@ -10,14 +10,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 
 import com.example.kaaninan.sifrele.Adapter;
 import com.example.kaaninan.sifrele.R;
 import com.example.kaaninan.sifrele.RehberConstructor;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Arkadaslar extends Fragment {
 
@@ -34,18 +37,40 @@ public class Arkadaslar extends Fragment {
         View rootView = inflater.inflate(R.layout.arkadaslar, container, false);
 
         ListView list = (ListView) rootView.findViewById(R.id.listRehber);
-        RelativeLayout layoutBos = (RelativeLayout) rootView.findViewById(R.id.layoutBos);
+        FrameLayout layoutBos = (FrameLayout) rootView.findViewById(R.id.layoutBos);
 
         ArrayList<RehberConstructor> rehber = rehberiGetir();
 
         Adapter adapter = new Adapter(getActivity(), R.layout.rehber_item, rehber);
 
-        list.setAdapter(adapter);
+        List<String> testler= new ArrayList<String>();
+
+        testler.add("merhaba");
+        testler.add("dünya");
+
+        ArrayAdapter<String> test = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, testler);
+
+        list.setAdapter(test);
 
         if (listBos){
             list.setVisibility(View.GONE);
             layoutBos.setVisibility(View.VISIBLE);
         }
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i(LOG,"tıklandı");
+            }
+        });
+
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i(LOG,"uzun tıklandı");
+                return false;
+            }
+        });
 
         return rootView;
     }

@@ -6,13 +6,9 @@
     <ListView android:id="@+id/listRehber"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clickable="true"
-        android:fastScrollEnabled="true"
-        android:fastScrollAlwaysVisible="true"
-        android:longClickable="true"
-        android:smoothScrollbar="true" />
+        android:divider="@null"/>
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/layoutBos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +45,7 @@
             android:textColor="#444"
             android:layout_centerInParent="true" />
 
-    </RelativeLayout>
+    </FrameLayout>
 
 
 </RelativeLayout>

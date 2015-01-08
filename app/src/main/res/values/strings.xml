@@ -16,7 +16,7 @@
 
     <!-- View Pager -->
     <string name="viewPager_mesaj">Mesajlar</string>
-    <string name="viewPager_arkadas">Arkadaşlar</string>
+    <string name="viewPager_arkadas">Rehber</string>
 
     <string name="no_notes">Sorry, no contacts</string>
     <string name="menu_insert">Insert new contact</string>
