@@ -1,13 +1,16 @@
 package com.example.kaaninan.sifrele.mesajlar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.kaaninan.sifrele.Mesaj;
 import com.example.kaaninan.sifrele.R;
 
 import java.util.ArrayList;
@@ -34,6 +37,14 @@ public class Mesajlar extends Fragment {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mesajlar);
         listMesajlar.setAdapter(adapter);
+
+        listMesajlar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), Mesaj.class);
+                startActivity(intent);
+            }
+        });
 
         return rootView;
     }

@@ -50,7 +50,7 @@ public class Arkadaslar extends Fragment {
 
         ArrayAdapter<String> test = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, testler);
 
-        list.setAdapter(test);
+        list.setAdapter(adapter);
 
         if (listBos){
             list.setVisibility(View.GONE);
