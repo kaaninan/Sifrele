@@ -60,9 +60,10 @@ containing a value of this type.
         public static final int kullanici=0x7f020005;
         public static final int rounded_rectangle_shape=0x7f020006;
         public static final int sad=0x7f020007;
+        public static final int search=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0016;
+        public static final int action_settings=0x7f0a0015;
         public static final int container=0x7f0a0003;
         public static final int drawer_content=0x7f0a0004;
         public static final int drawer_indicator=0x7f0a0000;
@@ -78,7 +79,6 @@ containing a value of this type.
         public static final int pager=0x7f0a000e;
         public static final int pager_title_strip=0x7f0a000f;
         public static final int section_label=0x7f0a000b;
-        public static final int text1=0x7f0a0015;
         public static final int text2=0x7f0a000c;
         public static final int textBos=0x7f0a0009;
         public static final int textRehberIsim=0x7f0a0013;
@@ -98,7 +98,6 @@ containing a value of this type.
         public static final int kisi1=0x7f030008;
         public static final int liste_main=0x7f030009;
         public static final int rehber_item=0x7f03000a;
-        public static final int test_list_item_layout=0x7f03000b;
     }
     public static final class menu {
         public static final int menu_main=0x7f090000;

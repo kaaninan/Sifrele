@@ -4,13 +4,15 @@
     android:layout_height="wrap_content"
     android:background="@drawable/header_selector" >
 
-    <com.example.kaaninan.sifrele.UnderlineTextView
+    <TextView
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start|left"
         android:padding="5dp"
+        android:layout_marginLeft="10dp"
         android:textColor="@android:color/white"
         android:textSize="17sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:text="A"/>
 </RelativeLayout><!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/layout/header.xml -->

@@ -1,6 +1,10 @@
 package com.example.kaaninan.sifrele;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,31 +18,26 @@ import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapter {
 
-    public ArrayList<String> ulkeler;
     private LayoutInflater inflater;
+
+    private ArrayList<RehberConstructor> rehber;
 
     private Context context;
 
     public RehberAdapter(Context context) {
         this.context = context;
         inflater = LayoutInflater.from(context);
-
-        ulkeler = new ArrayList<String>();
-
-        String[] ulke = context.getResources().getStringArray(R.array.countries);
-        for(String text : ulke){
-            ulkeler.add(text);
-        }
+        rehber = rehberiGetir();
     }
 
     @Override
     public int getCount() {
-        return ulkeler.size();
+        return rehber.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return ulkeler.get(position);
+        return rehber.get(position);
     }
 
     @Override
@@ -48,18 +47,18 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
 
         if (convertView == null) {
-            holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.test_list_item_layout, parent, false);
-            holder.text = (TextView) convertView.findViewById(R.id.text1);
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
+            convertView = inflater.inflate(R.layout.rehber_item, parent, false);
         }
 
-        holder.text.setText(ulkeler.get(position));
+        TextView isim = (TextView) convertView.findViewById(R.id.textRehberIsim);
+        TextView numara = (TextView) convertView.findViewById(R.id.textRehberNumara);
+
+        RehberConstructor rehberConstructor = rehber.get(position);
+
+        isim.setText(rehberConstructor.getIsim());
+        numara.setText(rehberConstructor.getNumara());
 
         return convertView;
     }
@@ -75,8 +74,8 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
         } else {
             holder = (HeaderViewHolder) convertView.getTag();
         }
-        //set header text as first char in name
-        String headerText = "" + ulkeler.get(position).subSequence(0, 1).charAt(0);
+        RehberConstructor rehberConstructor = rehber.get(position);
+        String headerText = "" + rehberConstructor.getIsim().subSequence(0, 1).charAt(0);
         holder.text.setText(headerText);
         holder.text.setTag("test");
         return convertView;
@@ -84,8 +83,8 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
 
     @Override
     public long getHeaderId(int position) {
-        //return the first character of the country as ID because this is what headers are based upon
-        return ulkeler.get(position).subSequence(0, 1).charAt(0);
+        RehberConstructor rehberConstructor = rehber.get(position);
+        return rehberConstructor.getIsim().subSequence(0, 1).charAt(0);
     }
 
     class HeaderViewHolder {
@@ -100,25 +99,79 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
     // Filter Class
     public void filter(String charText) {
         charText = charText.toLowerCase(Locale.getDefault());
-        ulkeler.clear();
+        rehber.clear();
         if (charText.length() == 0) {
 
-            String[] ulke = context.getResources().getStringArray(R.array.countries);
-            for(String text : ulke){
-                ulkeler.add(text);
-            }
+            rehber = rehberiGetir();
         }
         else
         {
-            String[] ulke = context.getResources().getStringArray(R.array.countries);
-            for(String foo : ulke){
-                if (foo.toLowerCase(Locale.getDefault()).contains(charText))
+            for(RehberConstructor foo : rehber){
+                if (foo.getIsim().toLowerCase(Locale.getDefault()).contains(charText))
                 {
-                    ulkeler.add(foo);
+                    rehber.add(foo);
                 }
             }
         }
         notifyDataSetChanged();
+    }
+
+    private Boolean listBos;
+
+    private ArrayList<RehberConstructor> rehberiGetir(){
+
+        RehberConstructor rehberConstructor = null;
+
+        ArrayList<RehberConstructor> arrayList = new ArrayList<RehberConstructor>();
+
+        Uri CONTENT_URI = ContactsContract.Contacts.CONTENT_URI;
+        String _ID = ContactsContract.Contacts._ID;
+        String DISPLAY_NAME = ContactsContract.Contacts.DISPLAY_NAME;
+        String HAS_PHONE_NUMBER = ContactsContract.Contacts.HAS_PHONE_NUMBER;
+
+        Uri PhoneCONTENT_URI = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
+        String Phone_CONTACT_ID = ContactsContract.CommonDataKinds.Phone.CONTACT_ID;
+        String NUMBER = ContactsContract.CommonDataKinds.Phone.NUMBER;
+
+        ContentResolver contentResolver = context.getContentResolver();
+
+        Cursor cursor = contentResolver.query(CONTENT_URI, null,null, null, null);
+
+        if (cursor.getCount() > 0) {
+
+            while (cursor.moveToNext()) {
+
+                String contact_id = cursor.getString(cursor.getColumnIndex( _ID ));
+                String name = cursor.getString(cursor.getColumnIndex( DISPLAY_NAME ));
+
+                int hasPhoneNumber = Integer.parseInt(cursor.getString(cursor.getColumnIndex( HAS_PHONE_NUMBER )));
+
+                if (hasPhoneNumber > 0) {
+                    listBos = false;
+
+                    rehberConstructor = new RehberConstructor();
+                    rehberConstructor.setIsim(name);
+                    Cursor phoneCursor = contentResolver.query(PhoneCONTENT_URI, null, Phone_CONTACT_ID + " = ?", new String[] { contact_id }, null);
+
+                    while (phoneCursor.moveToNext()) {
+                        String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(NUMBER));
+                        rehberConstructor.setNumara(phoneNumber);
+                        break;
+                    }
+
+                    phoneCursor.close();
+
+                    arrayList.add(rehberConstructor);
+
+                }else {
+                    listBos = true;
+                }
+            }
+        }else{
+            listBos = true;
+        }
+
+        return arrayList;
     }
 
 }
