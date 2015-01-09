@@ -1,7 +1,6 @@
 package com.example.kaaninan.sifrele.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ public class MesajlarAdapter extends BaseAdapter {
     private List<String> list;
     private int layoutResourceId;
 
-    private Drawable[] test;
+    private int[] renkler = new int[6];
 
     private int a = 0; //Yuvarlağın rengi için
 
@@ -33,12 +32,12 @@ public class MesajlarAdapter extends BaseAdapter {
         this.layoutResourceId = layoutResourceId;
         this.list = list;
 
-        test[0] = context.getResources().getDrawable(R.drawable.yuvarlak_blue);
-        test[1] = context.getResources().getDrawable(R.drawable.yuvarlak_gray);
-        test[2] = context.getResources().getDrawable(R.drawable.yuvarlak_green);
-        test[3] = context.getResources().getDrawable(R.drawable.yuvarlak_orange);
-        test[4] = context.getResources().getDrawable(R.drawable.yuvarlak_red);
-        test[5] = context.getResources().getDrawable(R.drawable.yuvarlak_yellow);
+        renkler[0] = R.drawable.yuvarlak_blue;
+        renkler[1] = R.drawable.yuvarlak_gray;
+        renkler[2] = R.drawable.yuvarlak_green;
+        renkler[3] = R.drawable.yuvarlak_orange;
+        renkler[4] = R.drawable.yuvarlak_red;
+        renkler[5] = R.drawable.yuvarlak_yellow;
     }
 
     public int getCount() {
@@ -66,8 +65,11 @@ public class MesajlarAdapter extends BaseAdapter {
 
         RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.layoutMesajlarYuvarlak);
         TextView mesaj = (TextView) view.findViewById(R.id.textMesaj);
+        TextView bas_harf = (TextView) view.findViewById(R.id.bas_harf);
 
-        relativeLayout.setBackgroundDrawable(test[a]);
+        String bas_harfi = "" + list.get(position).subSequence(0, 1).charAt(0);
+
+        relativeLayout.setBackgroundResource(renkler[a]);
         a++;
 
         if (a == 5){
@@ -75,6 +77,7 @@ public class MesajlarAdapter extends BaseAdapter {
         }
 
         mesaj.setText(list.get(position));
+        bas_harf.setText(bas_harfi);
 
         return view;
 

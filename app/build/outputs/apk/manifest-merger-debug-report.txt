@@ -19,6 +19,7 @@ ADDED from AndroidManifest.xml:5:5
 		ADDED from AndroidManifest.xml:5:22
 application
 ADDED from AndroidManifest.xml:7:5
+MERGED from com.actionbarsherlock:actionbarsherlock:4.4.0:4:3
 MERGED from com.android.support:support-v4:20.0.0:17:5
 	android:label
 		ADDED from AndroidManifest.xml:10:9
@@ -53,6 +54,7 @@ ADDED from AndroidManifest.xml:21:9
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from se.emilsjolander:stickylistheaders:2.5.2:7:5
+MERGED from com.actionbarsherlock:actionbarsherlock:4.4.0:3:3
 MERGED from com.android.support:support-v4:20.0.0:16:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0

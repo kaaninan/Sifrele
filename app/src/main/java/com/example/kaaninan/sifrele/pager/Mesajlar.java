@@ -11,7 +11,6 @@ import android.widget.ListView;
 
 import com.example.kaaninan.sifrele.Mesaj;
 import com.example.kaaninan.sifrele.R;
-import com.example.kaaninan.sifrele.adapter.ExAdapter;
 import com.example.kaaninan.sifrele.adapter.MesajlarAdapter;
 
 import java.util.ArrayList;
@@ -36,7 +35,7 @@ public class Mesajlar extends Fragment {
         mesajlar.add("Bu En Eski");
         mesajlar.add("Bu Dışlanmış");
 
-        MesajlarAdapter adapter = new MesajlarAdapter(getActivity(), R.layout.list_mesajlar, listMesajlar);
+        MesajlarAdapter adapter = new MesajlarAdapter(getActivity(), R.layout.list_mesajlar, mesajlar);
 
         listMesajlar.setAdapter(adapter);
 
