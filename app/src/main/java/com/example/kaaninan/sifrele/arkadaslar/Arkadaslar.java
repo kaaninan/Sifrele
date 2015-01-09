@@ -10,17 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
-import android.widget.ListView;
 
-import com.example.kaaninan.sifrele.Adapter;
 import com.example.kaaninan.sifrele.R;
 import com.example.kaaninan.sifrele.RehberConstructor;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Arkadaslar extends Fragment {
 
@@ -34,8 +28,8 @@ public class Arkadaslar extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.arkadaslar, container, false);
-
+        View rootView = inflater.inflate(R.layout.arkadaslar2, container, false);
+        /*
         ListView list = (ListView) rootView.findViewById(R.id.listRehber);
         FrameLayout layoutBos = (FrameLayout) rootView.findViewById(R.id.layoutBos);
 
@@ -71,6 +65,8 @@ public class Arkadaslar extends Fragment {
                 return false;
             }
         });
+
+        */
 
         return rootView;
     }

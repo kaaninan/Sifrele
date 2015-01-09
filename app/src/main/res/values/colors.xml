@@ -5,6 +5,8 @@
     <color name="dark_gray_pressed">#373e44</color>
     <color name="darker_gray">#1f2226</color>
 
-    <drawable name="focused">#ff5500</drawable>
-    <drawable name="selected">#FF00FF</drawable>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray_light">#99C9C9C9</color>
+    <color name="color_black_light">#99000000</color>
 </resources>

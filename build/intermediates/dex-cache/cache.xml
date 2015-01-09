@@ -22,5 +22,12 @@
         sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
         <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-e29d50b78d5899e26ee595fb33f0ab93cb90e052.jar" />
     </item>
+    <item
+        jar="/Users/Kaaninan/Downloads/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/listviewFilter/build/intermediates/pre-dexed/debug/support-v4-19.1.0-f75980f491dbca56e76114d34358e493a22b71a9.jar" />
+    </item>
 
 </items>
