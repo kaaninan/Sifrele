@@ -9,4 +9,8 @@
     <color name="color_white">#FFFFFF</color>
     <color name="color_gray_light">#99C9C9C9</color>
     <color name="color_black_light">#99000000</color>
+
+    <color name="header_normal">#ffe74c3c</color>
+    <color name="header_pressed">#ffc0392b</color>
+    <color name="menu_section_header">#FFDDDDDD</color>
 </resources>

@@ -9,9 +9,26 @@ package com.example.kaaninan.sifrele;
 
 public final class R {
     public static final class array {
-        public static final int pages=0x7f040000;
+        public static final int countries=0x7f040000;
+        public static final int pages=0x7f040001;
     }
     public static final class attr {
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int hasStickyHeaders=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isDrawingListUnderStickyHeader=0x7f010001;
     }
     public static final class color {
         public static final int color_black=0x7f050000;
@@ -21,7 +38,10 @@ public final class R {
         public static final int dark_gray=0x7f050004;
         public static final int dark_gray_pressed=0x7f050005;
         public static final int darker_gray=0x7f050006;
-        public static final int light_gray=0x7f050007;
+        public static final int header_normal=0x7f050007;
+        public static final int header_pressed=0x7f050008;
+        public static final int light_gray=0x7f050009;
+        public static final int menu_section_header=0x7f05000a;
     }
     public static final class dimen {
         public static final int actionbar_dimen=0x7f060000;
@@ -34,37 +54,35 @@ public final class R {
     public static final class drawable {
         public static final int arkadaslar_ico=0x7f020000;
         public static final int drawer_selector=0x7f020001;
-        public static final int ic_arrow=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int kullanici=0x7f020004;
-        public static final int rounded_rectangle_shape=0x7f020005;
-        public static final int sad=0x7f020006;
+        public static final int header_selector=0x7f020002;
+        public static final int ic_arrow=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int kullanici=0x7f020005;
+        public static final int rounded_rectangle_shape=0x7f020006;
+        public static final int sad=0x7f020007;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0019;
+        public static final int action_settings=0x7f0a0016;
         public static final int container=0x7f0a0003;
         public static final int drawer_content=0x7f0a0004;
         public static final int drawer_indicator=0x7f0a0000;
         public static final int drawer_layout=0x7f0a0002;
+        public static final int editArama=0x7f0a000a;
         public static final int editMesaj=0x7f0a0005;
-        public static final int empty_view=0x7f0a0014;
         public static final int imageView2=0x7f0a0010;
         public static final int indicator_style=0x7f0a0001;
         public static final int layoutBos=0x7f0a0007;
         public static final int listRehber=0x7f0a0006;
         public static final int listViewMesaj=0x7f0a000d;
-        public static final int list_view=0x7f0a000b;
-        public static final int loading_view=0x7f0a0013;
         public static final int mavigationlist001=0x7f0a0012;
         public static final int pager=0x7f0a000e;
         public static final int pager_title_strip=0x7f0a000f;
-        public static final int preview_view=0x7f0a0015;
-        public static final int row_title=0x7f0a0018;
-        public static final int search_view=0x7f0a000a;
-        public static final int section_label=0x7f0a000c;
+        public static final int section_label=0x7f0a000b;
+        public static final int text1=0x7f0a0015;
+        public static final int text2=0x7f0a000c;
         public static final int textBos=0x7f0a0009;
-        public static final int textRehberIsim=0x7f0a0016;
-        public static final int textRehberNumara=0x7f0a0017;
+        public static final int textRehberIsim=0x7f0a0013;
+        public static final int textRehberNumara=0x7f0a0014;
         public static final int textView=0x7f0a0011;
         public static final int xsadface=0x7f0a0008;
     }
@@ -74,16 +92,13 @@ public final class R {
         public static final int arkadaslar=0x7f030002;
         public static final int arkadaslar2=0x7f030003;
         public static final int fragment_main=0x7f030004;
-        public static final int hesap_ana=0x7f030005;
-        public static final int hesap_main=0x7f030006;
-        public static final int index_bar_view=0x7f030007;
+        public static final int header=0x7f030005;
+        public static final int hesap_ana=0x7f030006;
+        public static final int hesap_main=0x7f030007;
         public static final int kisi1=0x7f030008;
         public static final int liste_main=0x7f030009;
-        public static final int loading_empty_view=0x7f03000a;
-        public static final int preview_view=0x7f03000b;
-        public static final int rehber_item=0x7f03000c;
-        public static final int row_view=0x7f03000d;
-        public static final int section_row_view=0x7f03000e;
+        public static final int rehber_item=0x7f03000a;
+        public static final int test_list_item_layout=0x7f03000b;
     }
     public static final class menu {
         public static final int menu_main=0x7f090000;
@@ -109,4 +124,222 @@ public final class R {
          */
         public static final int AppTheme=0x7f080000;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a StickyListHeadersListView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_cacheColorHint android:cacheColorHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_choiceMode android:choiceMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_clipToPadding android:clipToPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_divider android:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_dividerHeight android:dividerHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_drawSelectorOnTop android:drawSelectorOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_fadingEdgeLength android:fadingEdgeLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_fastScrollAlwaysVisible android:fastScrollAlwaysVisible}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_fastScrollEnabled android:fastScrollEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_listSelector android:listSelector}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_overScrollMode android:overScrollMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_padding android:padding}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_paddingBottom android:paddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_paddingLeft android:paddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_paddingRight android:paddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_paddingTop android:paddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_requiresFadingEdge android:requiresFadingEdge}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_scrollbarStyle android:scrollbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_scrollbars android:scrollbars}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_scrollingCache android:scrollingCache}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_android_transcriptMode android:transcriptMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_hasStickyHeaders com.example.kaaninan.sifrele:hasStickyHeaders}</code></td><td></td></tr>
+           <tr><td><code>{@link #StickyListHeadersListView_isDrawingListUnderStickyHeader com.example.kaaninan.sifrele:isDrawingListUnderStickyHeader}</code></td><td></td></tr>
+           </table>
+           @see #StickyListHeadersListView_android_cacheColorHint
+           @see #StickyListHeadersListView_android_choiceMode
+           @see #StickyListHeadersListView_android_clipToPadding
+           @see #StickyListHeadersListView_android_divider
+           @see #StickyListHeadersListView_android_dividerHeight
+           @see #StickyListHeadersListView_android_drawSelectorOnTop
+           @see #StickyListHeadersListView_android_fadingEdgeLength
+           @see #StickyListHeadersListView_android_fastScrollAlwaysVisible
+           @see #StickyListHeadersListView_android_fastScrollEnabled
+           @see #StickyListHeadersListView_android_listSelector
+           @see #StickyListHeadersListView_android_overScrollMode
+           @see #StickyListHeadersListView_android_padding
+           @see #StickyListHeadersListView_android_paddingBottom
+           @see #StickyListHeadersListView_android_paddingLeft
+           @see #StickyListHeadersListView_android_paddingRight
+           @see #StickyListHeadersListView_android_paddingTop
+           @see #StickyListHeadersListView_android_requiresFadingEdge
+           @see #StickyListHeadersListView_android_scrollbarStyle
+           @see #StickyListHeadersListView_android_scrollbars
+           @see #StickyListHeadersListView_android_scrollingCache
+           @see #StickyListHeadersListView_android_transcriptMode
+           @see #StickyListHeadersListView_hasStickyHeaders
+           @see #StickyListHeadersListView_isDrawingListUnderStickyHeader
+         */
+        public static final int[] StickyListHeadersListView = {
+            0x0101007f, 0x010100d5, 0x010100d6, 0x010100d7,
+            0x010100d8, 0x010100d9, 0x010100de, 0x010100e0,
+            0x010100eb, 0x010100fb, 0x010100fc, 0x010100fe,
+            0x01010100, 0x01010101, 0x01010129, 0x0101012a,
+            0x0101012b, 0x01010226, 0x010102c1, 0x01010335,
+            0x010103a5, 0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#cacheColorHint}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:cacheColorHint
+        */
+        public static final int StickyListHeadersListView_android_cacheColorHint = 13;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#choiceMode}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:choiceMode
+        */
+        public static final int StickyListHeadersListView_android_choiceMode = 16;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#clipToPadding}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:clipToPadding
+        */
+        public static final int StickyListHeadersListView_android_clipToPadding = 8;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#divider}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:divider
+        */
+        public static final int StickyListHeadersListView_android_divider = 14;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#dividerHeight}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:dividerHeight
+        */
+        public static final int StickyListHeadersListView_android_dividerHeight = 15;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#drawSelectorOnTop}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:drawSelectorOnTop
+        */
+        public static final int StickyListHeadersListView_android_drawSelectorOnTop = 10;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#fadingEdgeLength}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:fadingEdgeLength
+        */
+        public static final int StickyListHeadersListView_android_fadingEdgeLength = 7;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#fastScrollAlwaysVisible}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:fastScrollAlwaysVisible
+        */
+        public static final int StickyListHeadersListView_android_fastScrollAlwaysVisible = 19;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#fastScrollEnabled}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:fastScrollEnabled
+        */
+        public static final int StickyListHeadersListView_android_fastScrollEnabled = 17;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#listSelector}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:listSelector
+        */
+        public static final int StickyListHeadersListView_android_listSelector = 9;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#overScrollMode}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:overScrollMode
+        */
+        public static final int StickyListHeadersListView_android_overScrollMode = 18;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#padding}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:padding
+        */
+        public static final int StickyListHeadersListView_android_padding = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#paddingBottom}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:paddingBottom
+        */
+        public static final int StickyListHeadersListView_android_paddingBottom = 5;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#paddingLeft}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:paddingLeft
+        */
+        public static final int StickyListHeadersListView_android_paddingLeft = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#paddingRight}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:paddingRight
+        */
+        public static final int StickyListHeadersListView_android_paddingRight = 4;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#paddingTop}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:paddingTop
+        */
+        public static final int StickyListHeadersListView_android_paddingTop = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#requiresFadingEdge}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:requiresFadingEdge
+        */
+        public static final int StickyListHeadersListView_android_requiresFadingEdge = 20;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#scrollbarStyle}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:scrollbarStyle
+        */
+        public static final int StickyListHeadersListView_android_scrollbarStyle = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#scrollbars}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:scrollbars
+        */
+        public static final int StickyListHeadersListView_android_scrollbars = 6;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#scrollingCache}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:scrollingCache
+        */
+        public static final int StickyListHeadersListView_android_scrollingCache = 11;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#transcriptMode}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+          @attr name android:transcriptMode
+        */
+        public static final int StickyListHeadersListView_android_transcriptMode = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.example.kaaninan.sifrele.R.attr#hasStickyHeaders}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.kaaninan.sifrele:hasStickyHeaders
+        */
+        public static final int StickyListHeadersListView_hasStickyHeaders = 21;
+        /**
+          <p>This symbol is the offset where the {@link com.example.kaaninan.sifrele.R.attr#isDrawingListUnderStickyHeader}
+          attribute's value can be found in the {@link #StickyListHeadersListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.kaaninan.sifrele:isDrawingListUnderStickyHeader
+        */
+        public static final int StickyListHeadersListView_isDrawingListUnderStickyHeader = 22;
+    };
 }

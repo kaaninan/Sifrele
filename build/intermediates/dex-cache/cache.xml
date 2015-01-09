@@ -9,6 +9,27 @@
         <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b6808fc55cd36a000817aee25f5a267670f0588a.jar" />
     </item>
     <item
+        jar="/Users/Kaaninan/Downloads/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-e29d50b78d5899e26ee595fb33f0ab93cb90e052.jar" />
+    </item>
+    <item
+        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b6808fc55cd36a000817aee25f5a267670f0588a.jar" />
+    </item>
+    <item
+        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/se.emilsjolander/stickylistheaders/2.5.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9f0808c3f609d8fe93018a8108d5a3d7c9cb5458">
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-7ff7dda7a288d0745d46094999ecaca8ffa41036.jar" />
+    </item>
+    <item
         jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
@@ -23,11 +44,18 @@
         <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-e29d50b78d5899e26ee595fb33f0ab93cb90e052.jar" />
     </item>
     <item
-        jar="/Users/Kaaninan/Downloads/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/listviewFilter/build/intermediates/pre-dexed/debug/support-v4-19.1.0-f75980f491dbca56e76114d34358e493a22b71a9.jar" />
+        revision="21.1.2"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-25fff0cad581f9094eb35c1ee28730d211b6253e.jar" />
+    </item>
+    <item
+        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/se.emilsjolander/stickylistheaders/2.5.2/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9f0808c3f609d8fe93018a8108d5a3d7c9cb5458">
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-7ff7dda7a288d0745d46094999ecaca8ffa41036.jar" />
     </item>
 
 </items>

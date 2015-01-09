@@ -52,6 +52,7 @@ ADDED from AndroidManifest.xml:21:9
 		ADDED from AndroidManifest.xml:22:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
+MERGED from se.emilsjolander:stickylistheaders:2.5.2:7:5
 MERGED from com.android.support:support-v4:20.0.0:16:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0

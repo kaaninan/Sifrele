@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/search_view"
+        android:id="@+id/editArama"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -13,19 +13,16 @@
         android:hint="Arama"
         android:singleLine="true" />
 
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
+    <!--
+    <ListView
+        android:id="@+id/listRehber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    -->
 
-        <include
-            layout="@layout/loading_empty_view" />
-
-        <com.example.listviewfilter.ui.PinnedHeaderListView
-            android:id="@+id/list_view"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scrollingCache="false" />
-    </FrameLayout>
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+        android:id="@+id/listRehber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

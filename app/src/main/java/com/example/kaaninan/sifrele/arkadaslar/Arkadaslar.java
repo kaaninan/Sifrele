@@ -6,20 +6,31 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.FrameLayout;
 
 import com.example.kaaninan.sifrele.R;
+import com.example.kaaninan.sifrele.RehberAdapter;
 import com.example.kaaninan.sifrele.RehberConstructor;
 
 import java.util.ArrayList;
+import java.util.Locale;
+
+import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 public class Arkadaslar extends Fragment {
 
     String LOG = "Arkadaslar.java";
     Boolean listBos;
+
+    EditText editsearch;
 
     public static final String ARG_SECTION_NUMBER = "section_number";
 
@@ -29,27 +40,52 @@ public class Arkadaslar extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.arkadaslar2, container, false);
-        /*
-        ListView list = (ListView) rootView.findViewById(R.id.listRehber);
+
+        //ListView list = (ListView) rootView.findViewById(R.id.listRehber);
+        StickyListHeadersListView list = (StickyListHeadersListView) rootView.findViewById(R.id.listRehber);
         FrameLayout layoutBos = (FrameLayout) rootView.findViewById(R.id.layoutBos);
 
+        /*
         ArrayList<RehberConstructor> rehber = rehberiGetir();
-
         Adapter adapter = new Adapter(getActivity(), R.layout.rehber_item, rehber);
-
-        List<String> testler= new ArrayList<String>();
-
-        testler.add("merhaba");
-        testler.add("dünya");
-
-        ArrayAdapter<String> test = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, testler);
-
         list.setAdapter(adapter);
 
         if (listBos){
             list.setVisibility(View.GONE);
             layoutBos.setVisibility(View.VISIBLE);
         }
+        */
+
+
+        final RehberAdapter rehberAdapter = new RehberAdapter(getActivity());
+        list.setAdapter(rehberAdapter);
+        list.setFastScrollEnabled(true);
+
+        editsearch = (EditText) rootView.findViewById(R.id.editArama);
+
+        // Capture Text in EditText
+        editsearch.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                // TODO Auto-generated method stub
+                String text = editsearch.getText().toString().toLowerCase(Locale.getDefault());
+                rehberAdapter.filter(text);
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence arg0, int arg1,
+                                          int arg2, int arg3) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onTextChanged(CharSequence arg0, int arg1, int arg2,
+                                      int arg3) {
+                // TODO Auto-generated method stub
+            }
+        });
+
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -65,8 +101,6 @@ public class Arkadaslar extends Fragment {
                 return false;
             }
         });
-
-        */
 
         return rootView;
     }

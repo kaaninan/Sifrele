@@ -1,2 +1,1 @@
-include ':app',':listviewFilter'
-include ':listviewFilter'
+include ':app'

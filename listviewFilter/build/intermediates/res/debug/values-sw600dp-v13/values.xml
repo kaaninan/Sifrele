@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/listviewFilter/src/main/res/values-sw600dp/dimens.xml -->
-    <eat-comment/>
-    <dimen name="index_bar_view_margin">15dp</dimen>
-    <dimen name="index_bar_view_text_size">16sp</dimen>
-    <dimen name="index_bar_view_width">30dp</dimen>
-</resources>

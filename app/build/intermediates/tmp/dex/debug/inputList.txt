@@ -1,0 +1,5 @@
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/classes/debug
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-e29d50b78d5899e26ee595fb33f0ab93cb90e052.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-7ff7dda7a288d0745d46094999ecaca8ffa41036.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b6808fc55cd36a000817aee25f5a267670f0588a.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-25fff0cad581f9094eb35c1ee28730d211b6253e.jar
