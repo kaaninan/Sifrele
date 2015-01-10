@@ -50,6 +50,7 @@
         android:layout_margin="5dp"
         android:drawableLeft="@drawable/search"
         android:hint="Arama"
+        android:textColor="@android:color/black"
         android:singleLine="true"
         android:selectAllOnFocus="true" />
 

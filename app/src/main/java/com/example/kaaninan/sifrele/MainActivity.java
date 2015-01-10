@@ -16,7 +16,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getActionBar().setBackgroundDrawable(getResources().getDrawable(R.color.dark_gray));
+        getActionBar().setBackgroundDrawable(getResources().getDrawable(R.color.action_red));
         int actionBarTitleId = Resources.getSystem().getIdentifier("action_bar_title", "id", "android");
         if (actionBarTitleId > 0) {
             TextView title = (TextView) findViewById(actionBarTitleId);

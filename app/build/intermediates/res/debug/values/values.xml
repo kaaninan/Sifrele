@@ -255,6 +255,7 @@
     <color name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</color>
     <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="action_red">#9C0020</color>
     <color name="color_black">#000000</color>
     <color name="color_black_light">#99000000</color>
     <color name="color_gray_light">#99C9C9C9</color>
