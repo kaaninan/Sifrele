@@ -32,7 +32,6 @@ public class MainFragment extends Fragment{
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
 
-
         pager.setAdapter(new FragmentStatePagerAdapter(fm) {
 
             public int getCount() {

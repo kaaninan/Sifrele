@@ -80,7 +80,6 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
         RehberConstructor rehberConstructor = rehber.get(position);
         String headerText = "" + rehberConstructor.getIsim().subSequence(0, 1).charAt(0);
         holder.text.setText(headerText);
-        holder.text.setTag("test");
         return convertView;
     }
 

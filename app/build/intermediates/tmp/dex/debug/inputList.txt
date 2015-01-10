@@ -1,6 +1,9 @@
 /Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/classes/debug
-/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-e29d50b78d5899e26ee595fb33f0ab93cb90e052.jar
-/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-7ff7dda7a288d0745d46094999ecaca8ffa41036.jar
-/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b6808fc55cd36a000817aee25f5a267670f0588a.jar
-/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-d60f5ecb8a07c509104fe8bfd077c34464e6d460.jar
-/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-25fff0cad581f9094eb35c1ee28730d211b6253e.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-945a12fc4eb7df8604946c713d35e8b229000f7f.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-2e10ff5be097fc59661fe9d0749d2b49e412b512.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-79c3d3911af471905cefd536a49bcea5d8519168.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-b651c41f08b6f194c44f263a8f49a5a34c3ff3ac.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/library-2.4.0-c3de430ea6038a896518c51e668ea18dc17d15af.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-cd98b0d5388045792a8602d315c30d51301ee174.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-3a9f1b8d4c2635d5ac64318443122b15d82eb665.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-86dd03a07ba1a5ff9ea2a85d53d387f253afb773.jar

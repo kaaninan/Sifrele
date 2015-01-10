@@ -4,12 +4,16 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.kaaninan.sifrele.R;
+import com.example.kaaninan.sifrele.constructor.MesajConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,17 +23,18 @@ import java.util.List;
 public class MesajlarAdapter extends BaseAdapter {
 
     private Context context;
-    private List<String> list;
-    private int layoutResourceId;
+    private List<MesajConstructor> list;
+    private LayoutInflater inflater;
 
     private int[] renkler = new int[6];
 
-    private int a = 0; //Yuvarlağın rengi için
+    private int lastPosition = 1;
+    private int a; //Yuvarlağın rengi için
 
-    public MesajlarAdapter(Context context, int layoutResourceId, List<String> list) {
+    public MesajlarAdapter(Context context, ArrayList<MesajConstructor> list) {
         super();
         this.context = context;
-        this.layoutResourceId = layoutResourceId;
+        inflater = LayoutInflater.from(context);
         this.list = list;
 
         renkler[0] = R.drawable.yuvarlak_blue;
@@ -38,6 +43,8 @@ public class MesajlarAdapter extends BaseAdapter {
         renkler[3] = R.drawable.yuvarlak_orange;
         renkler[4] = R.drawable.yuvarlak_red;
         renkler[5] = R.drawable.yuvarlak_yellow;
+
+        a = 0;
     }
 
     public int getCount() {
@@ -54,33 +61,47 @@ public class MesajlarAdapter extends BaseAdapter {
         return position;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View view, ViewGroup parent) {
 
-        View view = convertView;
+        if(position == 0)
+            a = 0;
 
         if(view==null){
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(layoutResourceId, null);
+            view = inflater.inflate(R.layout.list_mesajlar, parent, false);
         }
+
+        MesajConstructor mesajConstructor = list.get(position);
+
 
         RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.layoutMesajlarYuvarlak);
         TextView mesaj = (TextView) view.findViewById(R.id.textMesaj);
         TextView bas_harf = (TextView) view.findViewById(R.id.bas_harf);
 
-        String bas_harfi = "" + list.get(position).subSequence(0, 1).charAt(0);
+        String bas_harfi = "" + mesajConstructor.getIsim().subSequence(0, 1).charAt(0);
 
         relativeLayout.setBackgroundResource(renkler[a]);
-        a++;
 
-        if (a == 5){
-            a = 0;
-        }
+        mesajConstructor.setRenk(renkler[a]);
 
-        mesaj.setText(list.get(position));
+        mesaj.setText(mesajConstructor.getIsim());
         bas_harf.setText(bas_harfi);
+        view.setTag(mesajConstructor);
+        parent.setTag(mesajConstructor.getIsim());
+
+        a++;
+        if (a == 5){ a = 0; }
+
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.fade_in);
+        animation.setDuration(300);
+        view.startAnimation(animation);
+        lastPosition = position;
 
         return view;
 
+    }
+
+    private void sifirla(){
+        a = 0;
     }
 
 }

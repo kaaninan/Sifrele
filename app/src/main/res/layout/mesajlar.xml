@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-
-<ListView
-    android:id="@+id/listViewMesaj"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:divider="#aaa"
-    android:dividerHeight="0.5dp"/>
+    android:background="@android:color/white">
 
-</LinearLayout>
+    <!--<ListView
+        android:id="@+id/listViewMesaj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#eee"
+        android:dividerHeight="1dp"/>-->
+
+    <com.fortysevendeg.swipelistview.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listViewMesaj"
+        android:listSelector="#00000000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        swipe:swipeFrontView="@+id/test1"
+        swipe:swipeBackView="@+id/test1"
+        swipe:swipeActionLeft="dismiss"
+        swipe:swipeActionRight="dismiss"
+        swipe:swipeMode="right"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeOpenOnLongPress="false"
+        swipe:swipeAnimationTime="400"
+        swipe:swipeOffsetLeft="100dp"
+        swipe:swipeOffsetRight="100dp"/>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ekle_selector"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:fontFamily="sans-serif-light"
+        android:textSize="40sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
