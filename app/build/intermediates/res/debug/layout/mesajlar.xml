@@ -4,30 +4,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <!--<ListView
-        android:id="@+id/listViewMesaj"
+    <ListView
+        android:id="@+id/listviewMesaj"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#eee"
-        android:dividerHeight="1dp"/>-->
+        android:dividerHeight="1dp"/>
 
-    <com.fortysevendeg.swipelistview.SwipeListView
-        xmlns:swipe="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/listViewMesaj"
-        android:listSelector="#00000000"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        swipe:swipeFrontView="@+id/test1"
-        swipe:swipeBackView="@+id/test1"
-        swipe:swipeActionLeft="dismiss"
-        swipe:swipeActionRight="dismiss"
-        swipe:swipeMode="right"
-        swipe:swipeCloseAllItemsWhenMoveList="true"
-        swipe:swipeOpenOnLongPress="false"
-        swipe:swipeAnimationTime="400"
-        swipe:swipeOffsetLeft="100dp"
-        swipe:swipeOffsetRight="100dp"/>
-    
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -50,5 +33,11 @@
         android:layout_alignParentRight="true"
         android:gravity="center"
         android:textColor="@android:color/white"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:background="@android:color/holo_red_dark"></FrameLayout>
 
 </RelativeLayout><!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/layout/mesajlar.xml -->

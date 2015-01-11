@@ -4,8 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -91,10 +89,12 @@ public class MesajlarAdapter extends BaseAdapter {
         a++;
         if (a == 5){ a = 0; }
 
+        /*
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.fade_in);
         animation.setDuration(300);
         view.startAnimation(animation);
         lastPosition = position;
+        */
 
         return view;
 

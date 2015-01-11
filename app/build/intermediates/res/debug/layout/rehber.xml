@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/layoutRehber">
 
     <RelativeLayout
         android:id="@+id/layoutBos"
@@ -43,16 +44,24 @@
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/editArama"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:drawableLeft="@drawable/search"
-        android:hint="Arama"
-        android:textColor="@android:color/black"
-        android:singleLine="true"
-        android:selectAllOnFocus="true" />
+    <RelativeLayout
+        android:id="@+id/layoutEditArama"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="-60dp">
+
+        <EditText
+            android:id="@+id/editArama"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:drawableLeft="@drawable/search"
+            android:hint="Arama"
+            android:textColor="@android:color/black"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"/>
+
+    </RelativeLayout>
 
     <!--
     <ListView
@@ -64,7 +73,7 @@
     <se.emilsjolander.stickylistheaders.StickyListHeadersListView
         android:id="@+id/listRehber"
         android:layout_width="match_parent"
-        android:layout_below="@id/editArama"
+        android:layout_below="@id/layoutEditArama"
         android:layout_height="match_parent"/>
 
 </RelativeLayout><!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/layout/rehber.xml -->

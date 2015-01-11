@@ -1,35 +1,38 @@
 package com.example.kaaninan.sifrele.pager;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ListView;
 
 import com.example.kaaninan.sifrele.Mesaj;
 import com.example.kaaninan.sifrele.R;
 import com.example.kaaninan.sifrele.adapter.MesajlarAdapter;
 import com.example.kaaninan.sifrele.constructor.MesajConstructor;
-import com.fortysevendeg.swipelistview.SwipeListView;
 
 import java.util.ArrayList;
 
 public class Mesajlar extends Fragment {
 
-    private SwipeListView listMesajlar;
-
-    public Drawable renk;
-
-    public Mesajlar() {}
+    private ListView listMesajlar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.mesajlar, container, false);
 
-        listMesajlar = (SwipeListView) rootView.findViewById(R.id.listViewMesaj);
+        listMesajlar = (ListView) rootView.findViewById(R.id.listviewMesaj);
 
         final ArrayList<MesajConstructor> mesajlar = new ArrayList<MesajConstructor>();
 
@@ -58,6 +61,57 @@ public class Mesajlar extends Fragment {
 
         listMesajlar.setAdapter(adapter);
 
+        listMesajlar.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
+
+        listMesajlar.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
+            @Override
+            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
+                mode.setTitle(listMesajlar.getCheckedItemCount()+" Mesaj");
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Window window = getActivity().getWindow();
+                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                    window.setStatusBarColor(getResources().getColor(android.R.color.holo_red_dark));
+                }
+                MenuInflater inflater = mode.getMenuInflater();
+                inflater.inflate(R.menu.context_menu, menu);
+                return true;
+            }
+
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                return true;
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                int id = item.getItemId();
+
+                if (id == R.id.action_sil) {
+
+                    long[] hangisi = listMesajlar.getCheckedItemIds();
+
+                    mode.finish();
+                    return true;
+                }
+
+                return false;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Window window = getActivity().getWindow();
+                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                    window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
+                }
+            }
+        });
 
 
         listMesajlar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -74,6 +128,7 @@ public class Mesajlar extends Fragment {
             }
         });
 
+
         return rootView;
     }
-}// END Tek MainFragment
+}

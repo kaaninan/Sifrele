@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name="AppTheme" parent="android:Theme.Material.Light">
-    <item name="android:colorPrimary">@color/colorPrimary</item>
-    <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="android:statusBarColor">@color/colorPrimaryDark</item>
-    <item name="android:textColorPrimary">@android:color/white</item>
-</style>
 
-<style name="MesajTheme" parent="android:Theme.Material.Light">
-    <item name="android:textColorPrimary">@android:color/white</item>
-</style>
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:actionModeBackground">@android:color/holo_red_light</item>
+        <item name="android:actionModeSplitBackground">@android:color/holo_red_dark</item>
+        <!--<item name="android:actionModeCloseDrawable">@drawable/ic_action_accept</item>-->
+    </style>
+
 </resources>
