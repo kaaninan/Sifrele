@@ -1,0 +1,4 @@
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/classes/release
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/release/classes-79c3d3911af471905cefd536a49bcea5d8519168.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/release/nineoldandroids-2.4.0-b651c41f08b6f194c44f263a8f49a5a34c3ff3ac.jar
+/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/release/support-v4-19.1.0-f75980f491dbca56e76114d34358e493a22b71a9.jar

@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/Sifrele/swipelistview/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01fc5a54ec22c43514b331778d8183e0c1a835d0">
-        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/classes-d87ed4a1c5ca34e3085336be54b80983d7b246ce.jar" />
-    </item>
-    <item
         jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/se.emilsjolander/stickylistheaders/2.4.1/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -23,11 +16,11 @@
         <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-f75980f491dbca56e76114d34358e493a22b71a9.jar" />
     </item>
     <item
-        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/exploded-aar/Sifrele/swipelistview/unspecified/libs/nineoldandroids-2.4.0.jar"
+        jar="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/libs/nineoldandroids-2.4.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
-        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-4bb94612718426c87a0ab15fe4dfd31c5ae9ede0.jar" />
+        <dex dex="/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/build/intermediates/pre-dexed/release/nineoldandroids-2.4.0-b651c41f08b6f194c44f263a8f49a5a34c3ff3ac.jar" />
     </item>
 
 </items>

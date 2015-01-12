@@ -27,7 +27,7 @@ public class Rehber extends Fragment {
 
     String LOG = "Arkadaslar.java";
     private RelativeLayout layoutSearchEdit;
-    EditText editsearch;
+    private EditText editsearch;
 
     private static Context context;
     private StickyListHeadersListView list;

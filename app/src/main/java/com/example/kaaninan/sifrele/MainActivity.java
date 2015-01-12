@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -101,20 +100,19 @@ public class MainActivity extends FragmentActivity {
 
         if (id == R.id.action_search) {
 
-            Log.i("asdadadas", pager.getCurrentItem()+"");
-
             if (pager.getCurrentItem() == 0) {
+
+                List<Fragment> mesaj = getSupportFragmentManager().getFragments();
+                Mesajlar fragment = (Mesajlar) mesaj.get(0);
+                if (fragment.isSearch_open() == true){ fragment.SearchToUp(); }
+                else{ fragment.SearchToDown(); }
 
             }else if (pager.getCurrentItem() == 1) {
 
                 List<Fragment> rehber = getSupportFragmentManager().getFragments();
                 Rehber fragment = (Rehber) rehber.get(1);
-
-                if (fragment.isSearch_open() == true){
-                    fragment.SlideToUp();
-                }else{
-                    fragment.SlideToDown();
-                }
+                if (fragment.isSearch_open() == true){ fragment.SlideToUp(); }
+                else{ fragment.SlideToDown(); }
 
             }
             return true;
@@ -123,6 +121,7 @@ public class MainActivity extends FragmentActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 
 
