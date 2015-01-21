@@ -72,23 +72,23 @@ public class Mesajlar extends Fragment {
         final ArrayList<MesajConstructor> mesajlar = new ArrayList<MesajConstructor>();
 
         MesajConstructor mesajConstructor = new MesajConstructor();
-        mesajConstructor.setIsim("Bu sürüm için");
+        mesajConstructor.setIsim("Ceyhun ÜNAL");
         mesajConstructor.setNumara("05052748075");
         mesajlar.add(mesajConstructor);
         MesajConstructor mesajConstructor2 = new MesajConstructor();
-        mesajConstructor2.setIsim("gecemi gündüzüme");
+        mesajConstructor2.setIsim("Osman AZ");
         mesajConstructor2.setNumara("05052748075");
         mesajlar.add(mesajConstructor2);
         MesajConstructor mesajConstructor3 = new MesajConstructor();
-        mesajConstructor3.setIsim("kattım. Eğer bu");
+        mesajConstructor3.setIsim("Leyla AKPINAR");
         mesajConstructor3.setNumara("05052748075");
         mesajlar.add(mesajConstructor3);
         MesajConstructor mesajConstructor4 = new MesajConstructor();
-        mesajConstructor4.setIsim("uygulamadan para gelirse");
+        mesajConstructor4.setIsim("Orhan DEDE");
         mesajConstructor4.setNumara("05052748075");
         mesajlar.add(mesajConstructor4);
         MesajConstructor mesajConstructor5 = new MesajConstructor();
-        mesajConstructor5.setIsim("%80'i benimdir.");
+        mesajConstructor5.setIsim("Rıza TEPELİ");
         mesajConstructor5.setNumara("05052748075");
         mesajlar.add(mesajConstructor5);
 
