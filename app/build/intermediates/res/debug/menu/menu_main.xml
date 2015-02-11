@@ -2,6 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
     <item
+        android:id="@+id/action_ekle"
+        android:title="Ekle"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_input_add"/>
+
+    <item
         android:id="@+id/action_search"
         android:title="@string/action_search"
         android:showAsAction="ifRoom"
@@ -12,4 +18,5 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
 </menu><!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/menu/menu_main.xml -->

@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.kaaninan.sifrele.animation.ZoomOutPageTransformer;
 import com.example.kaaninan.sifrele.pager.Mesajlar;
@@ -97,6 +98,10 @@ public class MainActivity extends FragmentActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+
+        if (id == R.id.action_ekle) {
+            Toast.makeText(this, "Tıklandı", Toast.LENGTH_LONG).show();
+        }
 
         if (id == R.id.action_search) {
 
