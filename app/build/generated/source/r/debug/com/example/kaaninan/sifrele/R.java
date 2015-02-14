@@ -19,8 +19,12 @@ public final class R {
         public static final int up_bottom=0x7f040007;
     }
     public static final class array {
-        public static final int countries=0x7f050000;
-        public static final int pages=0x7f050001;
+        public static final int countries=0x7f060000;
+        public static final int pages=0x7f060001;
+        public static final int pref_example_list_titles=0x7f060002;
+        public static final int pref_example_list_values=0x7f060003;
+        public static final int pref_sync_frequency_titles=0x7f060004;
+        public static final int pref_sync_frequency_values=0x7f060005;
     }
     public static final class attr {
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -41,123 +45,152 @@ containing a value of this type.
         public static final int isDrawingListUnderStickyHeader=0x7f010001;
     }
     public static final class color {
-        public static final int blue=0x7f060000;
-        public static final int colorPrimary=0x7f060001;
-        public static final int colorPrimaryDark=0x7f060002;
-        public static final int color_black=0x7f060003;
-        public static final int color_black_light=0x7f060004;
-        public static final int color_gray_light=0x7f060005;
-        public static final int color_white=0x7f060006;
-        public static final int dark_gray=0x7f060007;
-        public static final int dark_gray_pressed=0x7f060008;
-        public static final int darker_gray=0x7f060009;
-        public static final int gray=0x7f06000a;
-        public static final int green=0x7f06000b;
-        public static final int header_normal=0x7f06000c;
-        public static final int header_pressed=0x7f06000d;
-        public static final int light_gray=0x7f06000e;
-        public static final int menu_section_header=0x7f06000f;
-        public static final int orange=0x7f060010;
-        public static final int red=0x7f060011;
-        public static final int yellow=0x7f060012;
+        public static final int blue=0x7f070000;
+        public static final int colorPrimary=0x7f070001;
+        public static final int colorPrimaryDark=0x7f070002;
+        public static final int color_black=0x7f070003;
+        public static final int color_black_light=0x7f070004;
+        public static final int color_gray_light=0x7f070005;
+        public static final int color_white=0x7f070006;
+        public static final int dark_gray=0x7f070007;
+        public static final int dark_gray_pressed=0x7f070008;
+        public static final int darker_gray=0x7f070009;
+        public static final int gray=0x7f07000a;
+        public static final int green=0x7f07000b;
+        public static final int header_normal=0x7f07000c;
+        public static final int header_pressed=0x7f07000d;
+        public static final int light_gray=0x7f07000e;
+        public static final int menu_section_header=0x7f07000f;
+        public static final int orange=0x7f070010;
+        public static final int red=0x7f070011;
+        public static final int settingsActionBar=0x7f070012;
+        public static final int settingsActionBarDark=0x7f070013;
+        public static final int yellow=0x7f070014;
     }
     public static final class dimen {
-        public static final int actionbar_dimen=0x7f070000;
-        public static final int activity_horizontal_margin=0x7f070001;
-        public static final int activity_vertical_margin=0x7f070002;
-        public static final int index_bar_view_margin=0x7f070003;
-        public static final int index_bar_view_text_size=0x7f070004;
-        public static final int index_bar_view_width=0x7f070005;
+        public static final int actionbar_dimen=0x7f080000;
+        public static final int activity_horizontal_margin=0x7f080001;
+        public static final int activity_vertical_margin=0x7f080002;
+        public static final int index_bar_view_margin=0x7f080003;
+        public static final int index_bar_view_text_size=0x7f080004;
+        public static final int index_bar_view_width=0x7f080005;
     }
     public static final class drawable {
-        public static final int ekle=0x7f020000;
-        public static final int ekle2=0x7f020001;
-        public static final int ekle_pressed=0x7f020002;
-        public static final int ekle_selector=0x7f020003;
-        public static final int header_selector=0x7f020004;
-        public static final int ic_action_accept=0x7f020005;
-        public static final int ic_action_discard=0x7f020006;
-        public static final int ic_action_new=0x7f020007;
-        public static final int ic_action_search=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int mesaj_ok_selector=0x7f02000a;
-        public static final int mesajlar_selector=0x7f02000b;
-        public static final int ok=0x7f02000c;
+        public static final int action_ekle=0x7f020000;
+        public static final int ekle=0x7f020001;
+        public static final int ekle2=0x7f020002;
+        public static final int ekle_pressed=0x7f020003;
+        public static final int ekle_selector=0x7f020004;
+        public static final int header_selector=0x7f020005;
+        public static final int ic_action_accept=0x7f020006;
+        public static final int ic_action_discard=0x7f020007;
+        public static final int ic_action_new=0x7f020008;
+        public static final int ic_action_search=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int mesaj_ok_selector=0x7f02000b;
+        public static final int mesajlar_selector=0x7f02000c;
         public static final int rounded_rectangle_shape=0x7f02000d;
         public static final int sad=0x7f02000e;
         public static final int search=0x7f02000f;
-        public static final int sohbet_kutusu=0x7f020010;
-        public static final int yuvarlak_blue=0x7f020011;
-        public static final int yuvarlak_gray=0x7f020012;
-        public static final int yuvarlak_green=0x7f020013;
-        public static final int yuvarlak_orange=0x7f020014;
-        public static final int yuvarlak_red=0x7f020015;
-        public static final int yuvarlak_yellow=0x7f020016;
+        public static final int ses=0x7f020010;
+        public static final int sohbet_kutusu=0x7f020011;
+        public static final int yuvarlak_blue=0x7f020012;
+        public static final int yuvarlak_gray=0x7f020013;
+        public static final int yuvarlak_green=0x7f020014;
+        public static final int yuvarlak_orange=0x7f020015;
+        public static final int yuvarlak_red=0x7f020016;
+        public static final int yuvarlak_yellow=0x7f020017;
     }
     public static final class id {
-        public static final int action_ekle=0x7f0b001e;
-        public static final int action_search=0x7f0b001f;
-        public static final int action_settings=0x7f0b0020;
-        public static final int action_sil=0x7f0b001d;
-        public static final int bas_harf=0x7f0b0005;
-        public static final int buttonMesajGonder=0x7f0b0015;
-        public static final int editArama=0x7f0b001b;
-        public static final int editKime=0x7f0b0013;
-        public static final int editMesaj=0x7f0b0002;
-        public static final int editMesajArama=0x7f0b000e;
-        public static final int imageButtonEkle=0x7f0b0010;
-        public static final int layoutBos=0x7f0b0017;
-        public static final int layoutEditArama=0x7f0b001a;
-        public static final int layoutEditMesajArama=0x7f0b000d;
-        public static final int layoutMesajYaz=0x7f0b0012;
-        public static final int layoutMesajlarYuvarlak=0x7f0b0004;
-        public static final int layoutRehber=0x7f0b0016;
-        public static final int layoutSohbetBen=0x7f0b000a;
-        public static final int layoutSohbetSen=0x7f0b000b;
-        public static final int listRehber=0x7f0b001c;
-        public static final int listView=0x7f0b0003;
-        public static final int listviewMesaj=0x7f0b000f;
-        public static final int mavigationlist001=0x7f0b000c;
-        public static final int pager=0x7f0b0000;
-        public static final int pager_title_strip=0x7f0b0001;
-        public static final int text2=0x7f0b0007;
-        public static final int textBos=0x7f0b0019;
-        public static final int textEkleButton=0x7f0b0011;
-        public static final int textMesaj=0x7f0b0006;
-        public static final int textMesajYazUyari=0x7f0b0014;
-        public static final int textRehberIsim=0x7f0b0008;
-        public static final int textRehberNumara=0x7f0b0009;
-        public static final int xsadface=0x7f0b0018;
+        public static final int MainLayout=0x7f0c0003;
+        public static final int SMSList=0x7f0c0005;
+        public static final int action_ekle=0x7f0c001f;
+        public static final int action_search=0x7f0c0020;
+        public static final int action_settings=0x7f0c001e;
+        public static final int action_sil=0x7f0c001d;
+        public static final int bas_harf=0x7f0c0007;
+        public static final int buttonMesajGonder=0x7f0c0015;
+        public static final int editArama=0x7f0c001b;
+        public static final int editKime=0x7f0c0013;
+        public static final int editMesaj=0x7f0c0001;
+        public static final int editMesajArama=0x7f0c0010;
+        public static final int layoutBos=0x7f0c0017;
+        public static final int layoutEditArama=0x7f0c001a;
+        public static final int layoutEditMesajArama=0x7f0c000f;
+        public static final int layoutMesajYaz=0x7f0c0012;
+        public static final int layoutMesajlarYuvarlak=0x7f0c0006;
+        public static final int layoutRehber=0x7f0c0016;
+        public static final int layoutSohbetBen=0x7f0c000c;
+        public static final int layoutSohbetSen=0x7f0c000d;
+        public static final int listRehber=0x7f0c001c;
+        public static final int listView=0x7f0c0002;
+        public static final int listviewMesaj=0x7f0c0011;
+        public static final int mavigationlist001=0x7f0c000e;
+        public static final int pager=0x7f0c0000;
+        public static final int text2=0x7f0c0009;
+        public static final int textBos=0x7f0c0019;
+        public static final int textMesaj=0x7f0c0008;
+        public static final int textMesajYazUyari=0x7f0c0014;
+        public static final int textRehberIsim=0x7f0c000a;
+        public static final int textRehberNumara=0x7f0c000b;
+        public static final int textView=0x7f0c0004;
+        public static final int xsadface=0x7f0c0018;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_mesaj=0x7f030001;
-        public static final int list_mesajlar=0x7f030002;
-        public static final int list_rehber_header=0x7f030003;
-        public static final int list_rehber_item=0x7f030004;
-        public static final int list_sohbet=0x7f030005;
-        public static final int liste_main=0x7f030006;
-        public static final int mesajlar=0x7f030007;
-        public static final int rehber=0x7f030008;
+        public static final int activity_mesaj_ekle=0x7f030002;
+        public static final int activity_sms=0x7f030003;
+        public static final int list_mesajlar=0x7f030004;
+        public static final int list_rehber_header=0x7f030005;
+        public static final int list_rehber_item=0x7f030006;
+        public static final int list_sohbet=0x7f030007;
+        public static final int liste_main=0x7f030008;
+        public static final int mesajlar=0x7f030009;
+        public static final int rehber=0x7f03000a;
     }
     public static final class menu {
-        public static final int context_menu=0x7f0a0000;
-        public static final int menu_main=0x7f0a0001;
-        public static final int menu_mesaj=0x7f0a0002;
+        public static final int context_menu=0x7f0b0000;
+        public static final int menu_ayarlar=0x7f0b0001;
+        public static final int menu_main=0x7f0b0002;
+        public static final int menu_mesaj=0x7f0b0003;
+        public static final int menu_mesaj_ekle=0x7f0b0004;
     }
     public static final class string {
-        public static final int action_new=0x7f080000;
-        public static final int action_search=0x7f080001;
-        public static final int action_settings=0x7f080002;
-        public static final int app_name=0x7f080003;
-        public static final int title_activity_mesaj=0x7f080004;
-        public static final int viewPager_arkadas=0x7f080005;
-        public static final int viewPager_mesaj=0x7f080006;
+        public static final int action_new=0x7f090000;
+        public static final int action_search=0x7f090001;
+        public static final int action_settings=0x7f090002;
+        public static final int app_name=0x7f090003;
+        public static final int pref_default_display_name=0x7f090004;
+        public static final int pref_description_social_recommendations=0x7f090005;
+        public static final int pref_header_data_sync=0x7f090006;
+        public static final int pref_header_general=0x7f090007;
+        public static final int pref_header_notifications=0x7f090008;
+        public static final int pref_ringtone_silent=0x7f090009;
+        public static final int pref_title_add_friends_to_messages=0x7f09000a;
+        public static final int pref_title_display_name=0x7f09000b;
+        public static final int pref_title_new_message_notifications=0x7f09000c;
+        public static final int pref_title_ringtone=0x7f09000d;
+        public static final int pref_title_social_recommendations=0x7f09000e;
+        public static final int pref_title_sync_frequency=0x7f09000f;
+        public static final int pref_title_system_sync_settings=0x7f090010;
+        public static final int pref_title_vibrate=0x7f090011;
+        public static final int title_activity_mesaj=0x7f090012;
+        public static final int title_activity_mesaj_ekle=0x7f090013;
+        public static final int title_activity_settings=0x7f090014;
+        public static final int viewPager_arkadas=0x7f090015;
+        public static final int viewPager_mesaj=0x7f090016;
     }
     public static final class style {
         /** <item name="android:actionModeCloseDrawable">@drawable/ic_action_accept</item>
          */
-        public static final int AppTheme=0x7f090000;
+        public static final int AppTheme=0x7f0a0000;
+    }
+    public static final class xml {
+        public static final int pref_data_sync=0x7f050000;
+        public static final int pref_general=0x7f050001;
+        public static final int pref_headers=0x7f050002;
+        public static final int pref_notification=0x7f050003;
     }
     public static final class styleable {
         /** Attributes that can be used with a StickyListHeadersListView.

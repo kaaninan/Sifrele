@@ -6,6 +6,7 @@
     tools:context=".MainActivity"
     android:background="@android:color/white">
 
+    <!--
     <android.support.v4.view.PagerTitleStrip
         android:id="@+id/pager_title_strip"
         android:layout_width="match_parent"
@@ -15,5 +16,6 @@
         android:paddingTop="8dp"
         android:textSize="18sp"
         android:textColor="@android:color/holo_blue_dark" />
+    -->
 
 </android.support.v4.view.ViewPager>

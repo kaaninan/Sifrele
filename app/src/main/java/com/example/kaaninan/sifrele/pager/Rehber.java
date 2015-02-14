@@ -1,6 +1,8 @@
 package com.example.kaaninan.sifrele.pager;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -84,6 +86,10 @@ public class Rehber extends Fragment {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     RehberConstructor value = (RehberConstructor) parent.getItemAtPosition(position);
                     Log.i(LOG, value.getIsim());
+
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse(("tel:" + value.getNumara())));
+                    startActivity(callIntent);
                 }
             });
 

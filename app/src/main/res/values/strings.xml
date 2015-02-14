@@ -20,7 +20,7 @@
     <string name="viewPager_arkadas">Rehber</string>
 
     <string name="title_activity_mesaj">Mesaj</string>
-
+    <string name="title_activity_mesaj_ekle">MesajEkleActivity</string>
 
 
 </resources>

@@ -2,7 +2,7 @@
 <resources>
 
     <style name="AppTheme" parent="android:Theme.Material.Light">
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--<item name="android:textColorPrimary">@android:color/white</item>-->
         <item name="android:actionModeBackground">@android:color/holo_red_light</item>
         <item name="android:actionModeSplitBackground">@android:color/holo_red_dark</item>
         <!--<item name="android:actionModeCloseDrawable">@drawable/ic_action_accept</item>-->

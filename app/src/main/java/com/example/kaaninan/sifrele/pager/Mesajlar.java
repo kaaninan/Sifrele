@@ -50,15 +50,15 @@ public class Mesajlar extends Fragment {
     private EditText editSearch;
     private boolean search_open = false;
 
-    private boolean acik = false; // Mesaj Ekleme Kısmı
+    public boolean acik = false; // Mesaj Ekleme Kısmı
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.mesajlar, container, false);
 
-        ekleButton = (ImageButton) rootView.findViewById(R.id.imageButtonEkle);
+        //ekleButton = (ImageButton) rootView.findViewById(R.id.imageButtonEkle);
         listMesajlar = (ListView) rootView.findViewById(R.id.listviewMesaj);
-        textEkle = (TextView) rootView.findViewById(R.id.textEkleButton);
+        //textEkle = (TextView) rootView.findViewById(R.id.textEkleButton);
         frameMesaj = (RelativeLayout) rootView.findViewById(R.id.layoutMesajYaz);
         textUyari = (TextView) rootView.findViewById(R.id.textMesajYazUyari);
         gonder = (Button) rootView.findViewById(R.id.buttonMesajGonder);
@@ -164,6 +164,7 @@ public class Mesajlar extends Fragment {
         });
 
 
+        /*
         ekleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -175,6 +176,7 @@ public class Mesajlar extends Fragment {
                 }
             }
         });
+        */
 
 
         gonder.setOnClickListener(new View.OnClickListener() {
@@ -204,7 +206,6 @@ public class Mesajlar extends Fragment {
     public void mesajGonderAc(){
         listMesajlar.setEnabled(false);
         SlideToDown();
-        ekleButton.setBackgroundResource(R.drawable.ekle2);
         dondur();
         acik = true;
     }
@@ -212,7 +213,6 @@ public class Mesajlar extends Fragment {
     public void mesajGonderKapat(){
         listMesajlar.setEnabled(true);
         SlideToUp();
-        ekleButton.setBackgroundResource(R.drawable.ekle);
         dondur_ters();
         acik = false;
         editKime.setText("");
@@ -225,7 +225,6 @@ public class Mesajlar extends Fragment {
     public void dondur_ters(){
         Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate_ters);
         animation.setFillAfter(true);
-        textEkle.startAnimation(animation);
 
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -249,7 +248,6 @@ public class Mesajlar extends Fragment {
 
         Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
         animation.setFillAfter(true);
-        textEkle.startAnimation(animation);
 
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override

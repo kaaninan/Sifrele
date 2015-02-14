@@ -18,6 +18,8 @@
     <!-- Standart Action Bar -->
     <color name="colorPrimary">#437af8</color>
     <color name="colorPrimaryDark">#3a5ada</color>
+    <color name="settingsActionBar">#7345dc</color>
+    <color name="settingsActionBarDark">#5823d2</color>
 
     <!-- Yuvarlaklar -->
     <color name="blue">#1E84C1</color>

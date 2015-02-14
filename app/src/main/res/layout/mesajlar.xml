@@ -31,6 +31,8 @@
         android:layout_below="@id/layoutEditMesajArama"
         android:dividerHeight="1dp"/>
 
+
+    <!--
     <FrameLayout
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -56,7 +58,7 @@
             android:textColor="@android:color/white"/>
 
     </FrameLayout>
-
+    -->
 
     <RelativeLayout
         android:id="@+id/layoutMesajYaz"

@@ -6,10 +6,6 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mavigationlist001"
-
-
-
-        />
+        android:id="@+id/mavigationlist001"/>
 
 </LinearLayout><!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/layout-v14/liste_main.xml -->

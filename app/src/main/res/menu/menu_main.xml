@@ -5,7 +5,7 @@
         android:id="@+id/action_ekle"
         android:title="Ekle"
         android:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_input_add"/>
+        android:icon="@drawable/action_ekle"/>
 
     <item
         android:id="@+id/action_search"

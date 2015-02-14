@@ -233,6 +233,34 @@
     <string-array name="pages">
         <item>com.example.kaaninan.TekHesap</item>
     </string-array>
+    <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/strings_activity_settings.xml -->
+    <eat-comment/>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
     <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="blue">#1E84C1</color>
@@ -253,6 +281,8 @@
     <color name="menu_section_header">#FFDDDDDD</color>
     <color name="orange">#FF7800</color>
     <color name="red">#FF1D56</color>
+    <color name="settingsActionBar">#7345dc</color>
+    <color name="settingsActionBarDark">#5823d2</color>
     <color name="yellow">#F0D700</color>
     <declare-styleable name="StickyListHeadersListView"><attr name="android:clipToPadding"/><attr name="android:scrollbars"/><attr name="android:overScrollMode"/><attr name="android:padding"/><attr name="android:paddingLeft"/><attr name="android:paddingTop"/><attr name="android:paddingRight"/><attr name="android:paddingBottom"/><attr name="android:fadingEdgeLength"/><attr name="android:requiresFadingEdge"/><attr name="android:cacheColorHint"/><attr name="android:choiceMode"/><attr name="android:drawSelectorOnTop"/><attr name="android:fastScrollEnabled"/><attr name="android:fastScrollAlwaysVisible"/><attr name="android:listSelector"/><attr name="android:scrollingCache"/><attr name="android:scrollbarStyle"/><attr name="android:divider"/><attr name="android:dividerHeight"/><attr name="android:transcriptMode"/><attr format="boolean" name="hasStickyHeaders"/><attr format="boolean" name="isDrawingListUnderStickyHeader"/></declare-styleable>
     <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/dimens.xml -->
@@ -269,13 +299,39 @@
     <string name="action_search">Arama</string>
     <string name="action_settings">Ayarlar</string>
     <string name="app_name">Colorstain</string>
+    <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/strings_activity_settings.xml -->
+    <eat-comment/>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="title_activity_mesaj">Mesaj</string>
+    <string name="title_activity_mesaj_ekle">MesajEkleActivity</string>
+    <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/strings_activity_settings.xml -->
+    <eat-comment/>
+    <string name="title_activity_settings">Settings</string>
+    <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="viewPager_arkadas">Rehber</string>
     <string name="viewPager_mesaj">Mesajlar</string>
     <!-- From: file:/Users/Kaaninan/AndroidStudioProjects/Sifrele/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--<item name="android:textColorPrimary">@android:color/white</item>-->
         <item name="android:actionModeBackground">@android:color/holo_red_light</item>
         <item name="android:actionModeSplitBackground">@android:color/holo_red_dark</item>
     </style>
