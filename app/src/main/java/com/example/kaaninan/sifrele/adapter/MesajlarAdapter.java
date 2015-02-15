@@ -70,9 +70,14 @@ public class MesajlarAdapter extends BaseAdapter {
 
         MesajConstructor mesajConstructor = list.get(position);
 
-
         RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.layoutMesajlarYuvarlak);
-        TextView mesaj = (TextView) view.findViewById(R.id.textMesaj);
+
+        TextView isim = (TextView) view.findViewById(R.id.textMesajIsim);
+        TextView isim_okunmamis = (TextView) view.findViewById(R.id.textMesajIsimOkunmamis);
+        TextView tarih = (TextView) view.findViewById(R.id.textMesajTarih);
+        TextView icerik = (TextView) view.findViewById(R.id.textMesajIcerik);
+        TextView icerik_okunmamis = (TextView) view.findViewById(R.id.textMesajIcerikOkunmamis);
+
         TextView bas_harf = (TextView) view.findViewById(R.id.bas_harf);
 
         String bas_harfi = "" + mesajConstructor.getIsim().subSequence(0, 1).charAt(0);
@@ -81,8 +86,29 @@ public class MesajlarAdapter extends BaseAdapter {
 
         mesajConstructor.setRenk(renkler[a]);
 
-        mesaj.setText(mesajConstructor.getIsim());
+
+        if (mesajConstructor.isOkundu()){
+            isim.setVisibility(View.VISIBLE);
+            isim_okunmamis.setVisibility(View.GONE);
+            isim.setText(mesajConstructor.getIsim());
+            icerik.setVisibility(View.VISIBLE);
+            icerik_okunmamis.setVisibility(View.GONE);
+            icerik.setText(mesajConstructor.getSon_mesaj());
+        }else{
+            isim_okunmamis.setTextColor(context.getResources().getColor(R.color.red));
+            isim_okunmamis.setVisibility(View.VISIBLE);
+            isim.setVisibility(View.GONE);
+            isim_okunmamis.setText(mesajConstructor.getIsim());
+            icerik_okunmamis.setVisibility(View.VISIBLE);
+            icerik.setVisibility(View.GONE);
+            icerik_okunmamis.setText(mesajConstructor.getSon_mesaj());
+        }
+
+
+        tarih.setText(String.valueOf(mesajConstructor.isOkundu()));
+
         bas_harf.setText(bas_harfi);
+
         view.setTag(mesajConstructor);
         parent.setTag(mesajConstructor.getIsim());
 

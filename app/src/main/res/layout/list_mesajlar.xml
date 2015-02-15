@@ -5,6 +5,7 @@
     android:background="@drawable/mesajlar_selector"
     android:padding="20dp">
 
+    <!-- Yuvarlak -->
     <RelativeLayout
         android:id="@+id/layoutMesajlarYuvarlak"
         android:layout_width="50dp"
@@ -21,15 +22,73 @@
 
     </RelativeLayout>
 
+    <!-- İsim -->
     <TextView
-        android:id="@+id/textMesaj"
+        android:id="@+id/textMesajIsim"
+        android:visibility="gone"
         android:layout_toRightOf="@id/layoutMesajlarYuvarlak"
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textColor="@android:color/black"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
         android:fontFamily="sans-serif-light"/>
+
+
+    <!-- Okunmamış İsim -->
+    <TextView
+        android:id="@+id/textMesajIsimOkunmamis"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/layoutMesajlarYuvarlak"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif"/>
+
+
+    <!-- İçerik -->
+    <TextView
+        android:id="@+id/textMesajIcerik"
+        android:visibility="gone"
+        android:layout_below="@id/textMesajIsim"
+        android:layout_toRightOf="@id/layoutMesajlarYuvarlak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#555"
+        android:fontFamily="sans-serif-light"/>
+
+
+    <!-- İçerik Okunmamış -->
+    <TextView
+        android:id="@+id/textMesajIcerikOkunmamis"
+        android:visibility="gone"
+        android:layout_below="@id/textMesajIsimOkunmamis"
+        android:layout_toRightOf="@id/layoutMesajlarYuvarlak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#555"
+        android:fontFamily="sans-serif"/>
+
+
+    <!-- Tarih -->
+    <TextView
+        android:id="@+id/textMesajTarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#555"/>
+
 
 </RelativeLayout>

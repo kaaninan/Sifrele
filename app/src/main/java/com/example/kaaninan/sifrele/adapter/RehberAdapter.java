@@ -136,7 +136,7 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
 
         ContentResolver contentResolver = context.getContentResolver();
 
-        Cursor cursor = contentResolver.query(CONTENT_URI, null, null, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
+        Cursor cursor = contentResolver.query(CONTENT_URI, null, null,  null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
 
         if (cursor.getCount() > 0) {
 
@@ -152,8 +152,9 @@ public class RehberAdapter extends BaseAdapter implements StickyListHeadersAdapt
 
                     rehberConstructor = new RehberConstructor();
                     rehberConstructor.setIsim(name);
+                    rehberConstructor.setId(contact_id);
 
-                    Cursor phoneCursor = contentResolver.query(PhoneCONTENT_URI, null, Phone_CONTACT_ID + " = ?", new String[] { contact_id }, null);
+                    Cursor phoneCursor = contentResolver.query(PhoneCONTENT_URI, null, null, null, null);
 
                     while (phoneCursor.moveToNext()) {
                         String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(NUMBER));

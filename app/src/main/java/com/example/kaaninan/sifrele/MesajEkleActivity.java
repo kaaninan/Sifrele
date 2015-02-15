@@ -11,7 +11,7 @@ public class MesajEkleActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mesaj_ekle);
+        setContentView(R.layout.test_activity_mesaj_gonder);
     }
 
 

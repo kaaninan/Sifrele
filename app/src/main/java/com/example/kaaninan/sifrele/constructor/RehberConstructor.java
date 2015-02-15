@@ -3,40 +3,40 @@ package com.example.kaaninan.sifrele.constructor;
 
 public class RehberConstructor {
 
-    public int id;
+    public String id;
     public String isim;
     public String numara;
     public boolean fav;
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setIsim(String isim) {
-        this.isim = isim;
-    }
-
-    public void setNumara(String numara) {
-        this.numara = numara;
-    }
-
-    public void setFav(boolean fav) {
-        this.fav = fav;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getIsim() {
         return isim;
     }
 
+    public void setIsim(String isim) {
+        this.isim = isim;
+    }
+
     public String getNumara() {
         return numara;
     }
 
+    public void setNumara(String numara) {
+        this.numara = numara;
+    }
+
     public boolean isFav() {
         return fav;
+    }
+
+    public void setFav(boolean fav) {
+        this.fav = fav;
     }
 }

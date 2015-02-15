@@ -3,17 +3,31 @@ package com.example.kaaninan.sifrele.constructor;
 
 public class MesajConstructor {
 
-    public int id;
-    public String isim;
-    public String numara;
-    public int renk;
-    public boolean fav;
+    long id;
+    String isim;
+    String numara;
+    String tarih;
+    int renk;
+    boolean okundu;
+    boolean fav;
+    String son_mesaj;
 
-    public int getId() {
+    public MesajConstructor(long id, String isim, String numara, String tarih, int renk, boolean okundu, boolean fav, String son_mesaj) {
+        this.id = id;
+        this.isim = isim;
+        this.numara = numara;
+        this.tarih = tarih;
+        this.renk = renk;
+        this.okundu = okundu;
+        this.fav = fav;
+        this.son_mesaj = son_mesaj;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -33,6 +47,14 @@ public class MesajConstructor {
         this.numara = numara;
     }
 
+    public String getTarih() {
+        return tarih;
+    }
+
+    public void setTarih(String tarih) {
+        this.tarih = tarih;
+    }
+
     public int getRenk() {
         return renk;
     }
@@ -41,11 +63,27 @@ public class MesajConstructor {
         this.renk = renk;
     }
 
+    public boolean isOkundu() {
+        return okundu;
+    }
+
+    public void setOkundu(boolean okundu) {
+        this.okundu = okundu;
+    }
+
     public boolean isFav() {
         return fav;
     }
 
     public void setFav(boolean fav) {
         this.fav = fav;
+    }
+
+    public String getSon_mesaj() {
+        return son_mesaj;
+    }
+
+    public void setSon_mesaj(String son_mesaj) {
+        this.son_mesaj = son_mesaj;
     }
 }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Telephony;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -101,12 +102,15 @@ public class MainActivity extends FragmentActivity {
         return true;
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.action_ekle) {
 
+            /*
             List<Fragment> mesaj = getSupportFragmentManager().getFragments();
             Mesajlar fragment = (Mesajlar) mesaj.get(0);
 
@@ -115,6 +119,10 @@ public class MainActivity extends FragmentActivity {
             } else {
                 fragment.mesajGonderAc();
             }
+            */
+            Intent intent = new Intent(Telephony.Sms.Intents.ACTION_CHANGE_DEFAULT);
+            intent.putExtra(Telephony.Sms.Intents.EXTRA_PACKAGE_NAME, getPackageName());
+            startActivity(intent);
 
             return true;
 

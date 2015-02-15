@@ -29,10 +29,9 @@ import android.widget.Toast;
 
 import com.example.kaaninan.sifrele.Mesaj;
 import com.example.kaaninan.sifrele.R;
+import com.example.kaaninan.sifrele.SmsYonet;
 import com.example.kaaninan.sifrele.adapter.MesajlarAdapter;
 import com.example.kaaninan.sifrele.constructor.MesajConstructor;
-
-import java.util.ArrayList;
 
 public class Mesajlar extends Fragment {
 
@@ -54,7 +53,7 @@ public class Mesajlar extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.mesajlar, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_mesajlar, container, false);
 
         //ekleButton = (ImageButton) rootView.findViewById(R.id.imageButtonEkle);
         listMesajlar = (ListView) rootView.findViewById(R.id.listviewMesaj);
@@ -69,30 +68,10 @@ public class Mesajlar extends Fragment {
         layoutSearchEdit = (RelativeLayout) rootView.findViewById(R.id.layoutEditMesajArama);
         editSearch = (EditText) rootView.findViewById(R.id.editMesajArama);
 
-        final ArrayList<MesajConstructor> mesajlar = new ArrayList<MesajConstructor>();
 
-        MesajConstructor mesajConstructor = new MesajConstructor();
-        mesajConstructor.setIsim("Ceyhun ÜNAL");
-        mesajConstructor.setNumara("05052748075");
-        mesajlar.add(mesajConstructor);
-        MesajConstructor mesajConstructor2 = new MesajConstructor();
-        mesajConstructor2.setIsim("Osman AZ");
-        mesajConstructor2.setNumara("05052748075");
-        mesajlar.add(mesajConstructor2);
-        MesajConstructor mesajConstructor3 = new MesajConstructor();
-        mesajConstructor3.setIsim("Leyla AKPINAR");
-        mesajConstructor3.setNumara("05052748075");
-        mesajlar.add(mesajConstructor3);
-        MesajConstructor mesajConstructor4 = new MesajConstructor();
-        mesajConstructor4.setIsim("Orhan DEDE");
-        mesajConstructor4.setNumara("05052748075");
-        mesajlar.add(mesajConstructor4);
-        MesajConstructor mesajConstructor5 = new MesajConstructor();
-        mesajConstructor5.setIsim("Rıza TEPELİ");
-        mesajConstructor5.setNumara("05052748075");
-        mesajlar.add(mesajConstructor5);
+        SmsYonet smsYonet = new SmsYonet(getActivity().getApplicationContext());
 
-        MesajlarAdapter adapter = new MesajlarAdapter(getActivity(), mesajlar);
+        MesajlarAdapter adapter = new MesajlarAdapter(getActivity(), smsYonet.getKonusmalar());
 
         listMesajlar.setAdapter(adapter);
 
@@ -158,6 +137,8 @@ public class Mesajlar extends Fragment {
 
                 intent.putExtra("renk_id",mesaj.getRenk());
                 intent.putExtra("isim",mesaj.getIsim());
+                intent.putExtra("mesaj_id",mesaj.getId());
+                intent.putExtra("body", mesaj.getSon_mesaj());
 
                 startActivity(intent);
             }
