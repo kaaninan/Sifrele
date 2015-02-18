@@ -16,6 +16,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.kaaninan.sifrele.R;
 import com.example.kaaninan.sifrele.adapter.RehberAdapter;
@@ -86,6 +87,9 @@ public class Rehber extends Fragment {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     RehberConstructor value = (RehberConstructor) parent.getItemAtPosition(position);
                     Log.i(LOG, value.getIsim());
+
+
+                    Toast.makeText(getActivity(), "Aranacak Kişinin İsmidir Ha: "+value.getIsim(), Toast.LENGTH_LONG).show();
 
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
                     callIntent.setData(Uri.parse(("tel:" + value.getNumara())));
